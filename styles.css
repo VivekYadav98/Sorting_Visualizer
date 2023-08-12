@@ -11,13 +11,8 @@
 #size-slider{
     color:cyan;
     font-family: 'Overpass', sans-serif;
-    /* margin-left: 10px; */
     font-weight: 100;
     font-size: 25px;
-    /* margin-top:30px;
-    margin-bottom:10px;
-    margin-left:-20px;
-    margin-right:40px; */
 }
 
 #speed-slider{
@@ -25,9 +20,6 @@
     font-family: 'Overpass', sans-serif;
     font-weight: 100;
     font-size: 25px;
-    /* margin-top:30px;
-    margin-bottom:10px;
-    margin-right:30px; */
 }
 
 
@@ -36,9 +28,6 @@
     font-size:20px;
     color:rgb(0, 0, 0);
     padding:7px;
-    /* margin-top:20px;
-    margin-right: 20px;
-    margin-bottom:10px; */
 }
 
 .btn-lg:hover{

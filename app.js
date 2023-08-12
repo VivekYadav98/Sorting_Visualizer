@@ -5,48 +5,48 @@ function swap(a,b){
     b.style.height=temp;
 }
 
-// functions to enable and disable buttons
+// functions to enable buttons
 function enableSort(){
     document.querySelector(".bubble").disabled=false;
     document.querySelector(".quick").disabled=false;
     document.querySelector(".merge").disabled=false;
     document.querySelector(".insertion").disabled=false;
     document.querySelector(".selection").disabled=false;
-    // document.querySelector(".array-gen-button").disabled=false;
-    // document.querySelector("#array-size").disabled=false;
 }
 
+// functions to disable buttons
 function disableSort(){
     document.querySelector(".bubble").disabled=true;
     document.querySelector(".quick").disabled=true;
     document.querySelector(".merge").disabled=true;
     document.querySelector(".insertion").disabled=true;
     document.querySelector(".selection").disabled=true;
-    // document.querySelector(".array-gen-button").disabled=true;
-    // document.querySelector("#array-size").disabled=true;
 }
 
+// function to disable New Array button
 function disableNewArrayBtn(){
     document.querySelector(".array-gen-button").disabled = true;
 }
 
-// Enables newArray buttons used in conjunction with disable
+// function to enable New Array button
 function enableNewArrayBtn(){
     document.querySelector(".array-gen-button").disabled = false;
 }
 
+// function to disable size slider
 function disableSizeSlider(){
     document.querySelector("#array-size").disabled = true;
 }
 
-// Enables size slider used in conjunction with disable
+// function to enable size slider
 function enableSizeSlider(){
     document.querySelector("#array-size").disabled = false;
 }
 
+
 function pause(time){
-    return new Promise(resolve => { 
-        setTimeout(() => { resolve('') }, time); 
+    return new Promise((resolve,reject) => { 
+        setTimeout(() => {resolve('') }, time); 
     }) 
 }
 
@@ -55,13 +55,17 @@ let arraySize=document.querySelector("#array-size");
 arraySize.addEventListener('input',function(){
     createArray(parseInt(arraySize.value));
 })
+
 let delay=300;
+
 //speed of bars 
 let speedval=document.querySelector("#speed-value");
+console.log(speedval.value);
 
 speedval.addEventListener('input',function(){
     delay=400-parseInt(speedval.value);
 });
+
 
 let array=[];
 createArray();
@@ -71,14 +75,14 @@ function deleteprev(){
     bar.innerHTML="";
 }
 
+// function to create new array
 function createArray(countBars=50){
     //clearing the previous input 
     deleteprev();
 
     array=[];
     for(let i=0;i<countBars;i++){
-        // let randomLen=;   //prevent 0 length bar
-        array.push(Math.floor(Math.random()*280)+2);
+        array.push(Math.floor(Math.random()*180)+2);
     }
 
     const bars=document.querySelector("#array-bars");

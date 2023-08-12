@@ -14,6 +14,7 @@ async function merge(ele,low,mid,high){
         ele[mid+1+i].style.background='yellow';
         right[i]=ele[mid+1+i].style.height;
     }
+    
     await pause(delay);
     let i=0,j=0,k=low;
 
